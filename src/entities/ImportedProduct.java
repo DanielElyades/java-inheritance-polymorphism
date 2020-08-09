@@ -2,30 +2,30 @@ package entities;
 
 public class ImportedProduct extends Product {
 	
-	private Double customFee;
+	private Double customsFee;
 	
 	public ImportedProduct() {
 	}
 
 	public ImportedProduct(String name, Double price, Double customFee) {
 		super(name, price);
-		this.customFee = customFee;
+		this.customsFee = customFee;
 	}
 
 	public Double getCustomFee() {
-		return customFee;
+		return customsFee;
 	}
 
 	public void setCustomFee(Double customFee) {
-		this.customFee = customFee;
+		this.customsFee = customFee;
 	}
 	@Override
 	public String priceTag() {
 		return getName()
 				+ " $ " 
 				+ String.format("%.2f", totalPrice())
-				+ " (Customs fee: $ "
-				+ String.format("%.2f, customFee)"
+				+ " (Customsfee: $ "
+				+ String.format("%.2f", customsFee)
 				+ ")";
 		
 	}
